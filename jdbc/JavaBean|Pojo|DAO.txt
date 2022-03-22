@@ -1,6 +1,14 @@
 Java Bean, POJO, DAO difference
 https://segmentfault.com/a/1190000020291377
 
+Java Bean:
+它其实是一套编码规范，所谓的编码规范，就类似于你告诉我这是个Java Bean，那我一定知道这个class有哪些特点
+
+所有属性为private
+提供默认构造方法
+提供getter和setter
+实现serializable接口
+
 POJO:
 基本上符合下面三无条件的，都可以称之为POJO：
 1. 不继承任何类
