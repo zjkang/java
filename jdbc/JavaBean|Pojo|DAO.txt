@@ -1,6 +1,7 @@
 Java Bean, POJO, DAO difference
 https://segmentfault.com/a/1190000020291377
 
+------------
 Java Bean:
 它其实是一套编码规范，所谓的编码规范，就类似于你告诉我这是个Java Bean，那我一定知道这个class有哪些特点
 
@@ -9,6 +10,7 @@ Java Bean:
 提供getter和setter
 实现serializable接口
 
+------------
 POJO:
 基本上符合下面三无条件的，都可以称之为POJO：
 1. 不继承任何类
@@ -17,6 +19,7 @@ POJO:
 
 另外，似乎POJO也不应该包含业务逻辑。
 
+------------
 DAO:
 DAO (DataAccessobjects 数据存取对象)是指位于业务逻辑和持久化数据之间实现对持久化数据的访问。通俗来讲，就是将数据库操作都封装起来
 
