@@ -1,0 +1,71 @@
+psvm
+sout
+
+https://www.bilibili.com/video/BV1Br4y1b7Cb/?spm_id_from=333.788.recommend_more_video.-1&vd_source=5a9e45133b5a5eb09750d99f1a6ad592
+
+导航类快捷键 Navigation shortcut 
+
+Ctrl + F: look up method, variable
+Ctrl + Shift + F:
+Shift + Shift
+Ctrl + N: go to Class
+Ctrl + Shift + N: go to File
+Ctrl + F12: display all the methods in the class
+
+Ctrl + G: go to line row:column
+Ctrl + Home: go to first row
+Ctrl + End: go to bottom row
+
+Alt + up/down arrow: method jump in one class
+Ctrl + Alt + left/right arrow: jump back/forth previous open
+Ctrl + E: Looks up historical open class
+
+Ctrl + B (Ctrl + left arrow): where interface method are used
+Ctrl + Alt + B (Ctrl + Alt + left arrow) what implementation class use the interface method
+
+———————————————————————————————
+
+文件操作类 shortcut
+
+interface: quick generate impl class and unit test class
+
+辅助编码 shortcut
+
+Ctrl + /: single line comment
+Ctrl + Shift + /: block comment
+/**: doc comment on top of the method
+
+Ctrl + Alt + L: format the code
+Al + Insert: add getter/setter, constructor, hash, equals, toString
+Ctrl + Shift + Enter: autocomplete
+Ctrl + Shift + Space: show tips
+
+Ctrl + Alt + T: create surround for code black (try catch, if, while) 
+Ctrl + P: method parameter tip
+
+Ctrl + I: impl class from interface/abstract class method override
+Ctrl + O: impl class from abstract class
+
+Ctrl + D: copy one row
+Ctrl + X: cut one row
+Ctrl + Y: delete one row
+Ctrl + shift + (up/down arrow): move code block
+
+Alt + Enter: import package
+Alt + Enter: introduce new local variable
+
+Setting -> search auto -> Auto Import -> Optimize import on the fly
+
+Ctrl + W: expand selection
+Ctrl + Shift + W: reduce selection
+
+—————————————————
+
+重构快捷键
+
+Shift + F6: 变量重命名
+Ctrl + R: current file replace
+Ctrl + Shift + R: global replacement
+Ctrl + Alt + V: expression replacement to variable
+Ctrl + Alt + C: expression replacement to constant
+Ctrl + Alt + M: 一段代码提取成一个方法
