@@ -27,11 +27,14 @@ Ctrl + Alt + B                   : what implementation class use the interface m
 
 
 ----------------------------------------------------------------------------
-
 文件操作类 shortcut
 
-interface: quick generate impl class and unit test class
+From interface: quick generate impl class and unit test class
+*Step: Click on interface name -> Alt + Enter -> select implment the interface
+*Step: Click on interface name -> Ctrl + Shift + T -> select unit test version and create unit test
 
+
+----------------------------------------------------------------------------
 辅助编码 shortcut
 
 Ctrl + /: single line comment
