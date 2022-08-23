@@ -3,27 +3,30 @@ sout
 
 https://www.bilibili.com/video/BV1Br4y1b7Cb/?spm_id_from=333.788.recommend_more_video.-1&vd_source=5a9e45133b5a5eb09750d99f1a6ad592
 
+----------------------------------------------------------------------------
 导航类快捷键 Navigation shortcut 
 
-Ctrl + F: look up method, variable
-Ctrl + Shift + F:
-Shift + Shift
-Ctrl + N: go to Class
-Ctrl + Shift + N: go to File
-Ctrl + F12: display all the methods in the class
+Ctrl + F                         : look up in file
+Ctrl + Shift + F                 : look up in project (global search)
+Shift + Shift                    : pop up search window
 
-Ctrl + G: go to line row:column
-Ctrl + Home: go to first row
-Ctrl + End: go to bottom row
+Ctrl + N                         : go to Class
+Ctrl + Shift + N                 : go to File
+Alt + up/down arrow              : method jump in one class
+Ctrl + F12                       : display all the methods in the class
 
-Alt + up/down arrow: method jump in one class
-Ctrl + Alt + left/right arrow: jump back/forth previous open
-Ctrl + E: Looks up historical open class
+Ctrl + G                         : go to line row:column
+Ctrl + Home                      : go to first row
+Ctrl + End                       : go to bottom row
 
-Ctrl + B (Ctrl + left arrow): where interface method are used
-Ctrl + Alt + B (Ctrl + Alt + left arrow) what implementation class use the interface method
+Ctrl + Alt + left/right arrow.   : jump back/forth previous cursor position
+Ctrl + E                         : Looks up historical open class
 
-———————————————————————————————
+Ctrl + B                         : jump to definition for class or jump to where interface method are called
+Ctrl + Alt + B                   : what implementation class use the interface method
+
+
+----------------------------------------------------------------------------
 
 文件操作类 shortcut
 
