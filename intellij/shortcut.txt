@@ -37,14 +37,14 @@ From interface: quick generate impl class and unit test class
 ----------------------------------------------------------------------------
 辅助编码 shortcut
 
-Ctrl + /: single line comment
-Ctrl + Shift + /: block comment
-/**: doc comment on top of the method
+Ctrl + /                               : single line comment
+Ctrl + Shift + /                       : block comment
+/** <Enter>                            : doc comment on top of the method
 
-Ctrl + Alt + L: format the code
-Al + Insert: add getter/setter, constructor, hash, equals, toString
-Ctrl + Shift + Enter: autocomplete
-Ctrl + Shift + Space: show tips
+Ctrl + Alt + L                         : format the code
+Alt + Insert                           : add getter/setter, constructor, hash, equals, toString
+Ctrl + Shift + Enter                   : autocomplete
+Ctrl + Shift + Space                   : show tips
 
 Ctrl + Alt + T: create surround for code black (try catch, if, while) 
 Ctrl + P: method parameter tip
