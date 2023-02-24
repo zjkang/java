@@ -69,7 +69,31 @@ persistance & ORM
   inputStream/outStream (byte); Reader/Writer (char)
   byte stream vs character stream
 - JDBC
- 
+- Generics Type
+  public class SingleGenericHolder<T> {
+     T obj;
+     SingleGenericHolder(T obj) {
+       this.obj = obj;
+     }
+     public T getObject() {
+       return obj;
+     }
+  }
+ - String handling
+   String.format()
+ - java.lang (not need to import the package)
+   java.util (not automatically import)
+     Collection interface
+     Collections
+ - ??? Networking in Java
+   Socket, URL
+ - images in Java
+ - Java concurrency util
+   Executor: interface
+   ExecutorService: async execution framework 
+   Future
+   completable future, callable
+   
   
 
 
