@@ -1,0 +1,93 @@
+https://www.edureka.co/blog/interview-questions/java-interview-questions/#JDBC
+
+Basic Java  Interview Questions
+  *
+Java OOPs Interview Questions
+JDBC Interview Questions
+Spring Interview Questions
+Hibernate Interview Questions
+JSP Interview Questions
+Java Exception and Thread Interview Questions
+
+
+
+----------------------------------------------
+- java为何要设计Cloneable这个接口
+https://www.zhihu.com/question/35240637
+https://blog.csdn.net/qq_37113604/article/details/81168224
+
+- 当需要返回一个不可修改的list的时候
+Collections.unmodifiableList(list);
+
+static class UnmodifiableList<E> extends UnmodifiableCollection<E>
+                                  implements List<E>
+when it implments List<E>, all modify method, e.g., add
+public void add(int index, E element) {
+   throw new UnsupportedOperationException();
+}
+
+
+----------------------------------------------
+jdbc
+https://www.jianshu.com/p/0eb44feeb54e
+
+- What are the steps to connect to a database in java?
+Registering the driver class
+Creating connection
+Creating statement
+Executing queries
+Closing connection
+
+----------------------------------------------
+hibernate
+https://www.bilibili.com/video/BV17V41177Br/?spm_id_from=333.337.search-card.all.click&vd_source=749a5a1f86706ea376033bbc264880b5
+
+persistance & ORM
+
+
+----------------------------------------------
+- enumeration using enum
+- annotation
+  metadata, used at compilier time
+  @Retention(RetentionPolicy.RUNTIME) // when the annotation applies
+  @Target(ElementType.TYPE) // what type the annotation applies to
+  public @interface MarkerAnnotation {
+      int value();
+  }
+- serialization
+  implement serializable
+  static long serializeID
+  transient: not want field to be serialized/deserialized
+- concurrency and thread
+  inherit from Thread; or implement Runnable interface
+  lock (monitor) and synchronization, put lock on object
+- autoboxing and unboxing
+  Integer iObj = Integer.valueOf(i);
+  int i = iObj;
+- I/O stream
+  input stream to read / output stream to write
+  inputStream/outStream (byte); Reader/Writer (char)
+  byte stream vs character stream
+- JDBC
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
