@@ -93,7 +93,9 @@ persistance & ORM
    ExecutorService: async execution framework 
    Future
    completable future, callable
-   
+- Regrex
+- Non blocking IO (NIO)
+
   
 
 
