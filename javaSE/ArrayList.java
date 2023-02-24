@@ -79,6 +79,39 @@ public class DataStructure implements Serializable, Cloneable {
 //         System.out.println("Object[] to List<Integer> " + nums2);
 //         Integer[] nums3 = nums2.toArray(new Integer[0]); // T[]
 //         System.out.println(Arrays.toString(nums3));
+        
+        
+        
+                // sort
+//        int[] nums = {20,2,3,4};
+////         1) array sort for primitive type
+//        Arrays.sort(nums); // sort ascending
+//        System.out.println(Arrays.toString(nums));
+//         ??? reverse for descending order by reverse
+
+        // 2) array sort for Object type
+//        Integer[] nums2 = {4,2,3};
+//        Arrays.sort(nums2);
+//        Arrays.sort(nums2, (a, b) -> a - b); // sort ascending
+//        Arrays.sort(nums2, (a, b) -> a.compareTo(b)); // sort ascending
+//        Arrays.sort(nums2, Integer::compareTo); // sort ascending
+//        Arrays.sort(nums2, Collections.reverseOrder()); // sort descending or override comparator
+//        Arrays.sort(nums2, (a, b) -> b - a); // sort descending, override comparator
+//        System.out.println(Arrays.toString(nums2)); // return [2,3,4]
+
+////        // 3) list collection sort for Object type
+//        List<Integer> nums = Arrays.asList(3,1,2);
+//        nums.sort(Integer::compareTo);
+////        Collections.sort(nums, Integer::compareTo);
+//        System.out.print("List Sort for Object type: ");
+//        System.out.println(nums); // return [2,3,4]
+        
+                // array reverse
+        // ??? reverse for primitive type
+        // reverse for Object type
+        List<Integer> nums = Arrays.asList(2,3,4);
+        Collections.reverse(nums);
+        System.out.println(nums); // return [4,3,2]
 
     }
 }
