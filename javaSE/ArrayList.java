@@ -112,6 +112,11 @@ public class DataStructure implements Serializable, Cloneable {
         List<Integer> nums = Arrays.asList(2,3,4);
         Collections.reverse(nums);
         System.out.println(nums); // return [4,3,2]
+        
+        // reverse for Object type
+        Integer[] nums = new Integer[]{1,2,3};
+        Collections.reverse(Arrays.asList(nums));
+        System.out.println(Arrays.toString(nums)); // return [3,2,1]
 
     }
 }
