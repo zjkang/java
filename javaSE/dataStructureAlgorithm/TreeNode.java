@@ -17,3 +17,11 @@ root.left = new TreeNode(1);
 root.right = new TreeNode(2);
 root.left.left = new TreeNode(3);
 root.left.right = new TreeNode(4);
+
+
+
+// Trie (Prefix Tree)
+// method: addWord(), searchWord(), searchPrefix()
+// time complexity: O(word.length)
+
+
