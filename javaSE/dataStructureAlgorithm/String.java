@@ -1,4 +1,4 @@
-//2. String
+// String
 String str = new String("ab666");
 str = new String(new char[]{'a', 'b', '6', '6', '6'});
 // common method
