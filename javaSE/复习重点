@@ -1,6 +1,6 @@
 java
 spring
-kafka            
+kafka, rabitmq          
 collection
 multi-threading
 gab collection 
