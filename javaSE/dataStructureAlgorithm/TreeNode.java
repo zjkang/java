@@ -24,4 +24,12 @@ root.left.right = new TreeNode(4);
 // method: addWord(), searchWord(), searchPrefix()
 // time complexity: O(word.length)
 
+class TrieNode {
+    TrieNode[] children;
+    boolean isWord;
+    public TrieNode() {
+        children = new TrieNode[26];
+    }
+}
+
 
