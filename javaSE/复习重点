@@ -9,7 +9,7 @@ rest-api
 micro-service, cloud
 cache: redis
 jvm
-database -> postgrel 
+database -> postgrel
 
 java简历
 coding - algorhim - array - string
