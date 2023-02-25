@@ -1,5 +1,36 @@
 https://www.edureka.co/blog/interview-questions/java-interview-questions/#JDBC
 
+
+https://segmentfault.com/a/1190000022654702
+https://blog.51cto.com/u_14623707/2466423
+
+Java 8 的主要新特性
+Lambda 表达式
+Lambda 允许把函数作为一个方法的参数传递进方法中。
+作用：解决 Java 被诟病的匿名内部类的问题。
+接口中可增加了默认方法
+作用：在接口中也可以有实现方法了。
+HashMap 底层数据结构的变化
+java 8 之前，HashMap 底层的数据结构是数组+链表实现的， Java 8 之后是数组+链表+红黑树实现的，当链表的长度超过 8 之后，会转换成红黑树。
+作用：解决因哈希冲突导致的链表过长，查询效率低的问题。
+Stream API
+新添加 Stream API (java.util.stream)，把真正函数式编程的风格引入 Java。
+提供一个新的 JavaScript 引擎
+Java 8 提供了一个新的 Nashorn JavaScript 引擎，它允许在 JVM 上运行特定的 JavaScript 应用。
+作用：解决日益增长的 Java 跟 JS 交互混合的需求。
+
+Java11相对Java8，在语法上的新特性并不多。主要有：
+本地变量类型推断
+HttpClient
+Collection增强
+Stream增强
+Optional增强
+String增强
+InputStream增强
+
+----------------------------------------------------------------------
+
+
 Basic Java  Interview Questions
   *
 Java OOPs Interview Questions
@@ -25,7 +56,6 @@ when it implments List<E>, all modify method, e.g., add
 public void add(int index, E element) {
    throw new UnsupportedOperationException();
 }
-
 
 ----------------------------------------------
 jdbc
