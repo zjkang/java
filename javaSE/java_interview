@@ -32,7 +32,39 @@ InputStream增强
 
 
 Basic Java  Interview Questions
-  *
+ Enumeration and Iterator
+   https://www.tutorialspoint.com/difference-between-iterator-and-enumeration-in-java 
+ Q13. What is the importance of reflection in Java?
+  Reflection is a runtime API for inspecting and changing the behavior of methods, classes, 
+  and interfaces. Java Reflection is a powerful tool that can be really beneficial. 
+  Java Reflection allows you to analyze classes, interfaces, fields, and methods 
+  during runtime without knowing what they are called at compile time. 
+  Reflection can also be used to create new objects, call methods, and get/set field values. 
+  External, user-defined classes can be used by creating instances of extensibility objects 
+  with their fully-qualified names. Debuggers can also use reflection to examine private 
+  members of classes.
+  https://www.baeldung.com/java-reflection
+  @Test
+  public void givenClass_whenInstantiatesObjectsAtRuntime_thenCorrect() {
+      Class<?> birdClass = Class.forName("com.baeldung.reflection.Bird");
+      Constructor<?> cons1 = birdClass.getConstructor();
+      Constructor<?> cons2 = birdClass.getConstructor(String.class);
+      Constructor<?> cons3 = birdClass.getConstructor(String.class,
+        boolean.class);
+
+      Bird bird1 = (Bird) cons1.newInstance();
+      Bird bird2 = (Bird) cons2.newInstance("Weaver bird");
+      Bird bird3 = (Bird) cons3.newInstance("dove", true);
+
+      assertEquals("bird", bird1.getName());
+      assertEquals("Weaver bird", bird2.getName());
+      assertEquals("dove", bird3.getName());
+
+      assertFalse(bird1.walks());
+      assertTrue(bird3.walks());
+  }
+  
+  
 Java OOPs Interview Questions
 JDBC Interview Questions
 Spring Interview Questions
