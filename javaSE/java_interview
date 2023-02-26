@@ -64,6 +64,14 @@ Basic Java  Interview Questions
       assertTrue(bird3.walks());
   }
   
+  Q24. What is JIT compiler in Java?
+  https://tech.meituan.com/2020/10/22/java-jit-practice-in-meituan.html
+  JIT stands for Just-In-Time compiler in Java. It is a program that helps in converting 
+  the Java bytecode into instructions that are sent directly to the processor. By default, 
+  the JIT compiler is enabled in Java and is activated whenever a Java method is invoked. 
+  The JIT compiler then compiles the bytecode of the invoked method into native machine code, 
+  compiling it “just in time” to execute. Once the method has been compiled, the JVM summons the compiled code of that method directly rather than interpreting it. This is why it is often responsible for the performance optimization of Java applications at the run time.
+  
   
 Java OOPs Interview Questions
 JDBC Interview Questions
