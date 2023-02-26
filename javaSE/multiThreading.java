@@ -19,3 +19,8 @@ Future<String> task = executorService.submit(() -> {
 
 System.out.println(task.get());
 
+
+
+// wait or notify
+https://www.baeldung.com/java-wait-notify
+
