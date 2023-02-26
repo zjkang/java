@@ -1,14 +1,15 @@
 java
-spring
-kafka, rabitmq          
 collection
 multi-threading
 gab collection 
+kafka, rabitmq   
+jvm
+
+spring
 spring-boot
 rest-api
 micro-service, cloud
 cache: redis
-jvm
 database -> postgrel
 
 java简历
