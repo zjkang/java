@@ -181,7 +181,15 @@ persistance & ORM
 
   
 
+----------------------
+ - springboot: annotaion to map restul api to function
+   https://www.oschina.net/translate/using-the-spring-requestmapping-annotation
+   @GetMapping("/departments/{id}")
+   @PathVariable("id") Long id
+   @Requestbody Department department // json to entity
+   
 
+  
 
 
 
