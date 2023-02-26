@@ -72,8 +72,18 @@ Basic Java  Interview Questions
   The JIT compiler then compiles the bytecode of the invoked method into native machine code, 
   compiling it “just in time” to execute. Once the method has been compiled, the JVM summons the compiled code of that method directly rather than interpreting it. This is why it is often responsible for the performance optimization of Java applications at the run time.
   
+  Q41. What is a classloader in Java?
+  The Java ClassLoader is a subset of JVM (Java Virtual Machine) that is responsible for loading the class files. 
+  Whenever a Java program is executed it is first loaded by the classloader. 
+  Java provides three built-in classloaders:
+  Bootstrap ClassLoader
+  Extension ClassLoader
+  System/Application ClassLoader
   
 Java OOPs Interview Questions
+   Difference between abstract class and interface
+   https://www.digitalocean.com/community/tutorials/java-8-interface-changes-static-method-default-method
+   
 JDBC Interview Questions
 Spring Interview Questions
 Hibernate Interview Questions
