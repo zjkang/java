@@ -39,3 +39,6 @@ Java中内存泄漏的原因有多种，这些众多的因素会导致Java程序
 使用内存泄漏检测工具如MAT,Visual VM，jprofile 等
 避免在代码中使用System.gc()
 避免使用内部类
+
+
+https://cloud.tencent.com/developer/article/1862924
