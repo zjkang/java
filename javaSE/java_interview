@@ -29,8 +29,6 @@ String增强
 InputStream增强
 
 ----------------------------------------------------------------------
-
-
 Basic Java  Interview Questions
  Enumeration and Iterator
    https://www.tutorialspoint.com/difference-between-iterator-and-enumeration-in-java 
@@ -93,6 +91,21 @@ Hibernate Interview Questions
 JSP Interview Questions
 Java Exception and Thread Interview Questions
 
+
+Override hashCode and equals
+
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Student student = (Student) o;
+    return age == student.age && number.equals(student.number) && category.equals(student.category);
+}
+
+@Override
+public int hashCode() {
+    return Objects.hash(number, category, age);
+}
 
 
 ----------------------------------------------
