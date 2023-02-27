@@ -1,0 +1,19 @@
+https://xie.infoq.cn/article/7577289323449da236cd0f127
+https://blog.csdn.net/lzb348110175/article/details/100764105
+https://blog.csdn.net/Dongguabai/article/details/86536894
+
+topic 是逻辑上的概念，而 partition 是物理上的概念，每个 partition 对应于一个 log 文件，该 log 文件中存储的就是 producer 生产的数据
+每个 Topic 可以划分多个分区（每个 Topic 至少有一个分区），同一 Topic 下的不同分区包含的消息是不同的。每个消息在被添加到分区时，都会被分配一个 offset，
+它是消息在此分区中的唯一编号，Kafka 通过 offset 保证消息在分区内的顺序，
+offset 的顺序不跨分区，即 Kafka 只保证在同一个分区内的消息是有序的
+
+
+Kafka 中最基本的数据单元就是消息，而一条消息其实是由 Key + Value 组成的（Key 是可选项，可传空值，Value 也可以传空值），
+这也是与 ActiveMQ 不同的一个地方。在发送一条消息时，我们可以指定这个 Key，那么 Producer 
+会根据 Key 和 partition 机制来判断当前这条消息应该发送并存储到哪个 partition 中（这个就跟分片机制类似)
+
+要注意的是如果 Consumer 数量比 partition 数量多，会有的 Consumer 闲置无法消费，这样是一个浪费。如果 Consumer 数量小于 partition 数量会有一个 Consumer 消费多个 
+partition。Kafka 在 partition 上是不允许并发的。Consuemr 数量建议最好是 partition 的整数倍。 
+还有一点，如果 Consumer 从多个 partiton 上读取数据，是不保证顺序性的，Kafka 只保证一个 partition 的顺序性，跨 partition 是不保证顺序性的。
+增减 Consumer、broker、partition 会导致 Rebalance
+
