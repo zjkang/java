@@ -21,6 +21,7 @@ https://www.javatpoint.com/java-multithreading-interview-questions
 
 // Create thread using futureTask
 // FutureTask implements Runnable & Future interface, and allows to pass Callable interface to get result
+// https://cloud.tencent.com/developer/article/1497507
 
 FutureTask<String> task = new FutureTask<>(() -> {
     Thread.sleep(1000);
@@ -28,7 +29,7 @@ FutureTask<String> task = new FutureTask<>(() -> {
 });
 Thread th = new Thread(task);
 th.start();
-System.out.println(task.get());
+System.out.println(task.get());  // Future interface, waiting for result; or task.isDone()
 
 
 // 
