@@ -1,11 +1,25 @@
 ---------------------------------------
 Database
-ACID: https://en.wikipedia.org/wiki/ACID
+https://en.wikipedia.org/wiki/ACID
+https://www.cnblogs.com/malaikuangren/archive/2012/04/06/2434760.html
+
+Transaction: 
+  ACID: https://en.wikipedia.org/wiki/ACID
+  C: 一致性,即在事务开始之前和事务结束以后，数据库的完整性约束没有被破坏
+  
+  
+
 Isolation:
+  Read Uncommited(最高的性能，但可能出现脏读，不可重复读，幻读)
+  Read commited(可能出现不可重复读，幻读)
+  Repeatable Read(可能出现幻读)
+  Serializable(最低的性能，一次只能执行一个事务，但避免了上述所有情况)
 
 
 ---------------------------------------
 Select statement
+
+https://www.w3schools.com/sql/default.asp
 
 SELECT TOP number column1, column2, ...
 FROM table_name;
