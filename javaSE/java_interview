@@ -202,6 +202,11 @@ persistance & ORM
    @Requestbody Department department // json to entity
    
 
+
+Collection VS Collections
+fail fast vs fail safe: https://zhuanlan.zhihu.com/p/37476508
+
+
   
 
 
