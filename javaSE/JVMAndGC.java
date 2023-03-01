@@ -41,4 +41,10 @@ Java中内存泄漏的原因有多种，这些众多的因素会导致Java程序
 避免使用内部类
 
 
+garbage collection原理
 https://cloud.tencent.com/developer/article/1862924
+
+
+
+
+
