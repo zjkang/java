@@ -24,6 +24,7 @@ list.addAll(Arrays.asList(1,2,3));
 System.out.println(list); // return 1,2,1,2,3
 list.remove(list.size()-1);
 System.out.println(list); // return 1,2,1,2
+list.set(1, 4); // return 1,4,1,2
 
 
 /* ------------------------------------ */  
