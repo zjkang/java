@@ -1,3 +1,7 @@
+// reference
+// https://www.baeldung.com/java-arrays-aslist-vs-list-of
+
+
 // how to create a new list with initialization value?
 List<String> list = new ArrayList<>();
 list.add("AAA");
@@ -29,3 +33,4 @@ list.add("CCC"); // cannot add element
 // What if I need to add using Arrays.asList or List.of?
 List<String> list = new ArrayList<>(Arrays.asList("AAA", "BBB"));
 list.add("CCC"); // cannot add element
+
