@@ -2,7 +2,7 @@
 
 1. sychronized: read varialbe always from main memory? (not thread copy)  read number vs write number 
    (add syncrhonized to both or write only and volatile)
-2. singleton: volatile to prevent instruction reordering  in new singleton object.  
+2. singleton: volatile to prevent instruction reordering  in new singleton object.  V69 blibli shangguigu
 
 
 // Thread basic concept
