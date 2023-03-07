@@ -1,3 +1,10 @@
+// volatile vs sychronized
+
+1. sychronized: read varialbe always from main memory? (not thread copy)  read number vs write number 
+   (add syncrhonized to both or write only and volatile)
+2. singleton: volatile to prevent instruction reordering  in new singleton object.  
+
+
 // Thread basic concept
 https://www.javatpoint.com/java-multithreading-interview-questions
   9) What is the difference between preemptive scheduling and time slicing?
