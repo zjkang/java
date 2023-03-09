@@ -20,11 +20,14 @@ List<?>  <-- List<T> extends
 
 
 // inspect & modify fields
+// Refer to ConfigParser & JsonWritter
 1. class.getDeclaredFields();                             : all fields but exclude inherited
 2. class.getDeclaredField("fieldName");                   : a field with field name
 3. field.get(instance);                                   : get field value from an instance
 4. field.getType();                                       : get field type
-5. field.set(instance, value)
+5. field.set(instance, value)                             : set field value for instance
+
+
 
 
 
