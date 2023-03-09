@@ -10,9 +10,12 @@ System.out.println(map.getOrDefault("B", 2)); // return 1
 System.out.println(map.getOrDefault("D", 10)); // return 10
 System.out.println(map); //{A=0,B=1,C=2}
 
+Set<String> strings = map.keySet();
+Collection<Integer> values = map.values();
 for(Map.Entry<String, Integer> entry : map.entrySet()) {
    System.out.println(entry.getKey() + ":" + entry.getValue());
 }
+
 // map.putIfAbsent("D", 3); // only add once key D does not in map
 // map.computeIfAbsent();
 // map.computeIfPresent();
@@ -50,4 +53,5 @@ treeSet.add(1);
 System.out.println(treeSet.lower(1));
 System.out.println(treeSet.higher(1));
 System.out.println(treeSet.floor(1));
+System.out.println(treeSet.ceiling(1));
 
