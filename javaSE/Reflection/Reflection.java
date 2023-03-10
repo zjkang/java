@@ -28,6 +28,10 @@ List<?>  <-- List<T> extends
 5. field.set(instance, value)                             : set field value for instance
 
 
+// method
+1. clazz.getDeclaredMethod() : current class method
+2. clazz.getMethod()         : current and inherited method
+3. method.invoke(Object instance, Object ... args)
 
 
 
