@@ -1,10 +1,14 @@
 // Class<?>: (wildcard ?) for generic type
-1. Class<Object> objectClass = object.getClass();
-2. Class<Car> carClass = Car.class;
-  - ".class" suffix to a type name
-  - Class booleanType = boolean.class;
-3. Class.forName("package.full")
-List<?>  <-- List<T> extends
+// Refer to ClassDemo
+1. Class<?>: Gateway to use Java reflection; put restriction like Class<? extends Collection> clazz
+  List<T> extends --> List<?> for any generic T;
+  but List<Interger> not extends List<Number>; List<String> not implements List<CharSequence>
+2. Create Class<?>
+  1. Class<Object> objectClass = object.getClass(); // cannot apply to primitive type
+  2. Class<Car> carClass = Car.class;
+    - ".class" suffix to a type name
+    - Class booleanType = boolean.class; // can apply to primitive type
+  3. Class.forName("package.full")
 
   
 // Constructor<?> class
