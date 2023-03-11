@@ -12,15 +12,16 @@
 
   
 // Constructor<?> class
+// Refer to Constructor/Demo.java
 1. clazz.getDeclaredConstructors()                       : include public or private
 2. clazz.getConstructors()                               : include public only
 3. clazz.getDeclaredConstructor(Class<?> ... paramType)  : include paramTypes
+  // create an instance
+  constructor = clazz.getDeclaredConstructor(Class<?> ... paramType)
+  constructor = clazz.getDeclaredConstructor()          : default constructor
+  constructor.setAccessible(true);                      : private constructor
+  constructor.newInstance(Ojbect ... arguments)         : create a new instance
 
-// create an instance
-1. constructor = clazz.getDeclaredConstructor(Class<?> ... paramType)
-   constructor = clazz.getDeclaredConstructor()          : default constructor
-2. constructor.setAccessible(true);                      : private constructor
-3. constructor.newInstance(Ojbect ... arguments)         : create a new instance
 
 
 // inspect & modify fields
