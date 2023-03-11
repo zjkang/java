@@ -20,6 +20,7 @@
   constructor = clazz.getDeclaredConstructor(Class<?> ... paramType)
   constructor = clazz.getDeclaredConstructor()          : default constructor
   constructor.setAccessible(true);                      : private constructor
+  constructor.getParameterTypes()                       : param types for constructor
   constructor.newInstance(Ojbect ... arguments)         : create a new instance
 
 
