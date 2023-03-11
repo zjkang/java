@@ -35,6 +35,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
+    
+    // other ways for private constructor
+//             Constructor<ServerConfiguration> constructor =
+//                 ServerConfiguration.class.getDeclaredConstructor(int.class, String.class);
+
+//         constructor.setAccessible(true);
+//         constructor.newInstance(8080, "Good Day!");
 
     public static void main(String [] args) throws IllegalAccessException, InstantiationException, InvocationTargetException {
         printConstructorsData(Person.class);
