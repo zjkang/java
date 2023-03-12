@@ -10,7 +10,7 @@
     - Class booleanType = boolean.class; // can apply to primitive type
   3. Class.forName("package.full")
 
-  
+// ---------------------------------
 // Constructor<?> class
 // Refer to Constructor directory
 1. clazz.getDeclaredConstructors()                       : include public or private
@@ -23,7 +23,7 @@
   constructor.getParameterTypes()                       : param types for constructor
   constructor.newInstance(Ojbect ... arguments)         : create a new instance
 
-
+// ---------------------------------
 // inspect & modify fields
 // Refer to Field directory ConfigParser & JsonWritter
 1. clazz.getDeclaredFields();                             : all fields but exclude inherited
@@ -33,7 +33,7 @@
 5. field.set(instance, value)                             : set field value for instance
 6. field.setAccessible(true)                              : set accessible
 
-
+// ---------------------------------
 // inspect & invoke method
 // Refer to Method directory
 1. clazz.getDeclaredMethod() : current class method
@@ -41,7 +41,7 @@
 3. method.getParameterTypes()
 4. method.invoke(Object instance, Object ... args)
 
-
+// ---------------------------------
 // modifiers
 clazz.getModifiers();
 method.getModifiers();
