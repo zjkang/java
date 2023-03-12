@@ -12,7 +12,7 @@
 
   
 // Constructor<?> class
-// Refer to Constructor/Demo.java
+// Refer to Constructor directory
 1. clazz.getDeclaredConstructors()                       : include public or private
 2. clazz.getConstructors()                               : include public only
 3. clazz.getDeclaredConstructor(Class<?> ... paramType)  : include paramTypes
@@ -24,14 +24,14 @@
   constructor.newInstance(Ojbect ... arguments)         : create a new instance
 
 
-
 // inspect & modify fields
-// Refer to ConfigParser & JsonWritter
+// Refer to Field directory ConfigParser & JsonWritter
 1. clazz.getDeclaredFields();                             : all fields but exclude inherited
 2. clazz.getDeclaredField("fieldName");                   : a field with field name
 3. field.get(instance);                                   : get field value from an instance
 4. field.getType();                                       : get field type
 5. field.set(instance, value)                             : set field value for instance
+6. field.setAccessible(true)                              : set accessible
 
 
 // inspect & invoke method
