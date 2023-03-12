@@ -43,9 +43,14 @@
 
 // ---------------------------------
 // modifiers
-clazz.getModifiers();
-method.getModifiers();
-field.getModifiers();
+1. clazz.getModifiers();
+2. method.getModifiers();
+3. field.getModifiers();
+4. Modifier.isAbstract(modifier); : to identify modifier type (abstract)
+  
+// ---------------------------------
+// annotations
+
 
 
 
