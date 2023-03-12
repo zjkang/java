@@ -35,9 +35,11 @@
 
 
 // inspect & invoke method
+// Refer to Method directory
 1. clazz.getDeclaredMethod() : current class method
 2. clazz.getMethod()         : current and inherited method
-3. method.invoke(Object instance, Object ... args)
+3. method.getParameterTypes()
+4. method.invoke(Object instance, Object ... args)
 
 
 // modifiers
