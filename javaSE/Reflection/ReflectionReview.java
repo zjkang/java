@@ -52,6 +52,11 @@
 // annotations
 
 
+// ---------------------------------
+// dynamic proxy
+1. implement invocationHandler interface
+2. create Proxy class and object using Proxy.newInstance(...) method
+
 
 
 
