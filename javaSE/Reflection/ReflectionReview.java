@@ -50,7 +50,10 @@
   
 // ---------------------------------
 // annotations
-
+1. clazz.isAnnotationPresent(AnnotationClass.class);
+2. clazz.getAnnotation(AnnotationClass.class); : or method
+3. method.isAnnotationPresent(AnnotationMethod.class);
+4. method.getAnnotationsByType(AnnotationMethod.class); // for repeatalbe annotations
 
 // ---------------------------------
 // dynamic proxy
