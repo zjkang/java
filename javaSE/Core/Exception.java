@@ -1,10 +1,6 @@
 // interview questions
 // https://rollbar.com/blog/how-to-handle-checked-unchecked-exceptions-in-java/
 
-1. why checked exception is called as compile time exception, does it occurs in compile time?
-2. 
-
-
 // Checked exception
 // Checked exception must be re-throw (throws in method) or try catch
 public class MyException extends Exception {
