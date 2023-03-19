@@ -25,6 +25,7 @@ System.out.println(set.contains(3)); // return false
 for (Integer element : set) {
     System.out.println(element); // 1, 2
 }
+set.remove(1);
 
 
 // TreeMap sorted key
