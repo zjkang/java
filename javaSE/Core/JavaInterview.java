@@ -20,3 +20,15 @@ Student s1 = new Student();
 Student s2 = new Student();
 s1 = s2;
 
+
+// -----------------------------------------
+// 21. How to write your own custom immutable class
+//     - Make your class final
+//     - Declare all instance variable with private and final
+//     - Say no to setter methods
+//     - Initialize all variables in constructor and can initialize variables in constructor
+//     - Perform cloning of mutable objects while returning from getter method (or create a new object)
+//     * you can go with clone method but its always not recommended, disadvantage
+// -----------------------------------------
+
+
