@@ -1,1 +1,17 @@
-1. 
+https://www.youtube.com/watch?v=gPnd-hzM_6A&t=1740s
+
+1. add annotation
+@NotNull(message = "username should not be null")
+@Pattern(regexp = "")
+@Min
+@NotBlank
+
+
+2. deal with restControllerAdvice with exception handler annotation
+
+
+
+
+
+
+
