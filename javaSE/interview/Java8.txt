@@ -1,3 +1,5 @@
+https://www.youtube.com/watch?v=k7fNLXoVCYg&list=PLVz2XdJiJQxwS8FyWnWyKyfILxHPLsiro&index=16
+
 1. What are all features of java 8 did you use?
 (1) Functional interface (default & static method)
 (2) Lambda function
@@ -77,6 +79,29 @@ Map<String, Long> collect = Arrays.stream(test.split(""))
                 Collectors.counting()));
 
 15. Assume you have list of employee in various dept, WAP to find highest paid employee from each dept?
+
+16. Stream vs parallel stream?
+
+17. Waht is CompletableFuture? 
+CompletableFuture is used async programming in Java. Async programming is a means of writing non-blocding code by running a task on a seprate thread than the main thread, notifying the main thread about its progress, completion or failure. 
+
+18. Why CompletableFuture why not Future? 
+(1) It cannot be manually completed
+(2) Multiple futures cannot chained together
+(3) cannot combine multiple futures together
+(4) no exception handling
+
+19. How to deciede Thread pool size?
+
+20. WAP to print even and oldd using 2 threads.
+
+CompletableFuture.runAsync(() -> EvenOdd.Printer.printNumber(oddCond)); // thread 1
+CompletableFuture.runAsync(() -> EvenOdd.Printer.printNumber(evenCond)); // thread 2
+
+
+
+
+
 
 
 
