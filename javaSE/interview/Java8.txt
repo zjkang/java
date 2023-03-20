@@ -1,0 +1,17 @@
+1. What are all features of java 8 did you use?
+(1) Functional interface (default & static method)
+(2) Lambda function
+(3) Stream
+(4) CompletableFuture
+(5) Java DateTime API
+
+2. What is functional interface?
+
+3. Can you tell few functional interface before Java 8?
+Runnalbe, Callable
+Comparator (equals method override from java.lang.Object which does not account for abtract method)
+
+4. Can you write one functional interface?
+
+5 can we extends functional interface from another functional interface?
+
