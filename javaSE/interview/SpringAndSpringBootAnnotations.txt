@@ -1,0 +1,128 @@
+Bean
+
+1. @SpringBootApplication: package component scan, auto config, config
+auto confi: jar dependency added in porm.xml
+ComponentScan: scan packages
+Configuration: bean definition
+
+2. Stereotype annotation
+@Component, @Service, @RestController / @Controller, @Repository
+
+3. @Configuration, @Bean: use java based configuration
+
+4. @Autowired, @Qualifier, @Primary
+@Autowired: one dependency injection
+@Qualifier: @Qualifier("studentServiceImpl")
+
+5. @Lazy
+
+6. @Value: load from property file: application.properties
+@Value(${main.host})
+
+7. @PropertySouce("classpath:...."): property file path
+
+8. @ConfigurationProperties(prefix = "mail")
+map property to single class
+
+9. @Data: auto config get, set method, toString
+
+10. @Profile
+switch dev/staging/prod env for configuration properties
+need to specify which one is active in properties
+
+11. Scope
+singleton, prototype, 
+
+-------------------------------------
+Rest API related Annotations
+expose the endpoint
+
+@RestController
+
+@RequestMapping("/students")
+@RequestMapping("save", method = RequestMethod.POST, consumes = "", produces = "")
+
+@GetMapping, @PostMapping, @PutMapping, @DelteMapping
+
+@RequestBody: payload
+
+@PathVariable: in request url {id}
+
+@RequestParam: localhost:8080/students/reqbyId?id=111
+
+@RestControllerAdvice
+@ExceptionHandler
+
+
+-------------------------------------
+Spring Data JPA related annotations
+
+@Entity: tell jpb this is entity to perform db operations
+@Table(name = "STUDENT_TBL")
+
+@Id: primary key
+@Column
+@GeneratorValue
+@GeneratorType
+
+@Transactional(isolation = "", propagation = "")
+
+@OneToMany(targetEntity = )
+
+
+-------------------------------------
+Security related Annotations
+
+-------------------------------------
+Cached related Annotations
+
+-------------------------------------
+AOP Aspect Oriented related Annotations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
