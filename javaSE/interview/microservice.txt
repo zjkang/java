@@ -1,0 +1,21 @@
+login management
+order management
+payment management
+inventory management
+
+each microservice can be developed independently.
+each miscroservce can use different tech.
+decouple the systems
+
+each microservice focuses on one functionalities, its own data model
+stateless
+
+
+-----------------------------------
+monolithic 
+  all components share one database
+  compile & deployement cost
+  only one process 
+
+
+
