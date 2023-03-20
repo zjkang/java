@@ -1,6 +1,10 @@
 https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
 
 
+grpc
+https://techdozo.dev/grpc-for-microservices-communication/
+
+
 login management
 order management
 payment management
