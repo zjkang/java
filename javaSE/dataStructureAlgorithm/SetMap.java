@@ -11,7 +11,22 @@ System.out.println(map); //{A=0,B=1,C=2}
 for(Map.Entry<String, Integer> entry : map.entrySet()) {
    System.out.println(entry.getKey() + ":" + entry.getValue());
 }
+
+// putIfAbsent
+// default V putIfAbsent(K key,
+//                       V value)
+// If the specified key is not already associated with a value (or is mapped to null) associates it with the given value and returns null, 
+// else returns the current value.
+// Implementation Requirements:
+// The default implementation is equivalent to, for this map:
+ 
+//  V v = map.get(key);
+//  if (v == null)
+//      v = map.put(key, value);
+
+//  return v;
 map.putIfAbsent("D", 3); // only add once key D does not in map
+
 // map.computeIfAbsent();
 // map.computeIfPresent();
 
