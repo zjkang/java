@@ -2,7 +2,10 @@ psvm
 sout
 
 https://www.bilibili.com/video/BV1Br4y1b7Cb/?spm_id_from=333.788.recommend_more_video.-1&vd_source=5a9e45133b5a5eb09750d99f1a6ad592
+https://www.youtube.com/watch?v=TNGqPxQRKZ4&t=333s
 
+
+Windows Version
 ----------------------------------------------------------------------------
 导航类快捷键 Navigation shortcut 
 
