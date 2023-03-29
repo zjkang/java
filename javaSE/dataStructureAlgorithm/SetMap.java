@@ -14,7 +14,6 @@ for(Map.Entry<String, Integer> entry : map.entrySet()) {
 
 https://stackoverflow.com/questions/48183999/what-is-the-difference-between-putifabsent-and-computeifabsent-in-java-8-map
 
-
 // putIfAbsent
 // default V putIfAbsent(K key,
 //                       V value)
@@ -26,8 +25,11 @@ https://stackoverflow.com/questions/48183999/what-is-the-difference-between-puti
 //  V v = map.get(key);
 //  if (v == null)
 //      v = map.put(key, value);
-
 //  return v;
+
+// !!! NOTE: v is NOT current v; it is previous v. So always use computeIfAbsent 
+// !!! when trying to use something like a.put(k, k -> new ArrayList<>()).add(b); 
+
 v = map.putIfAbsent("D", 3); // only add once key D does not in map
 v == null; // if D not exist in map
 
