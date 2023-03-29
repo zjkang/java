@@ -50,7 +50,7 @@ interface Info {
 
 enum Season {
   //1. define enum object at the beginning
-  SPRING("Spring", "Spring 1") {
+  SPRING("Spring", "Spring 1") { // call constructor
     @Override
     void show() {
       System.out.println("show1");
