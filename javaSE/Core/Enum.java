@@ -93,5 +93,10 @@ enum Season {
 
 
 
+// can use enum to create singleton class instance
+enum COLOR {
+  RED
+};
+
 
 
