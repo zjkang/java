@@ -1,0 +1,16 @@
+https://www.digitalocean.com/community/tutorials/install-maven-mac-os
+
+1. Install JDK first
+
+
+2. Install Maven
+
+2.2) Setting Maven Environment Variables - M2_HOME and Path
+The next step is to set up the environment variables - M2_HOME and Path. 
+We have to add the Maven bin directory to the Path variable. Open .bash_profile in your favorite text editor and add below lines to the end of it.
+
+export M2_HOME="/Users/pankaj/Downloads/apache-maven-3.6.3"
+PATH="${M2_HOME}/bin:${PATH}"
+export PATH
+
+$ mvn -version
