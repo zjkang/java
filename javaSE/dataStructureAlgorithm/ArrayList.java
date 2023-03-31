@@ -94,6 +94,8 @@ System.out.println(Arrays.toString(nums2)); // return [2,3,4]
 List<Integer> nums = Arrays.asList(3,1,2);
 nums.sort(Integer::compareTo);
 // Collections.sort(nums, Integer::compareTo);
+nums = nums.stream().sorted().collect(Collectors.toList());
+nums = nums.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 System.out.println(nums); // return [1,2,3]
 
 
