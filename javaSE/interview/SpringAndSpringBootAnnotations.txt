@@ -1,12 +1,18 @@
 Bean
 
+
+
 1. @SpringBootApplication: package component scan, auto config, config
 auto confi: jar dependency added in porm.xml
 ComponentScan: scan packages
 Configuration: bean definition
 
 2. Stereotype annotation
-@Component, @Service, @RestController / @Controller, @Repository
+@RestController/@Controller
+@Component
+@Service
+@Repository
+
 
 3. @Configuration, @Bean: use java based configuration
 
@@ -34,25 +40,79 @@ need to specify which one is active in properties
 singleton, prototype, 
 
 -------------------------------------
-Rest API related Annotations
-expose the endpoint
+Rest API related Annotations: expose the endpoint
 
-@RestController
+@RestController == @Controller & @Reponsebody
 
+@RequestMapping("/")
 @RequestMapping("/students")
-@RequestMapping("save", method = RequestMethod.POST, consumes = "", produces = "")
+@RequestMapping(value = "save", method = RequestMethod.POST, consumes = "", produces = "")
 
-@GetMapping, @PostMapping, @PutMapping, @DelteMapping
+@GetMapping("/user")
+@PostMapping("/user")
+@PutMapping
+@DelteMapping
 
-@RequestBody: payload
+@PathVariable
+the information is mandary one in request url {id}
+@GetMapping("/users/{id1}")
+public String pathTest(@PathVariable("id1") String id)
 
-@PathVariable: in request url {id}
+@RequestParam: localhost:8080//users/query?id=111; localhost:8080//users/query?id=111&email=123@abc.com
+Request Param can be optional
+@GetMapping("/users/query)
+public String requestTest(@RequestParam(name = "id", required = false, defaultValue = "") String id, @RequestParam String email))
 
-@RequestParam: localhost:8080/students/reqbyId?id=111
+@RequestBody: e.g. payload in POST request
+e.g.
+@PostMapping
+public Employee save(@RequestBoday Employee employee)
 
-@RestControllerAdvice
+@RestControllerAdvice: AOP, Create advisor for custom exception
 @ExceptionHandler
+e.g.
+@ControllerAdvice
+public class RestResponseEntityExceptionHandler 
+  extends ResponseEntityExceptionHandler {
+  
+  @ExceptionHandler(EmployeeNotFoundException.class)
+  @ResponseBody
+  @ResponseStatus(HttpStatus.NOT_FOUND)
+  public ErrorMessage employeeNotFoundExceptionHandler(EmployeeNotFoundException e) {
+  }
+  
+  @ExceptionHandler(Exception.class)
+  @ResponseBody
+  @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+  public ErrorMessage exceptionHandler(Exception e) {
+  }
+}
 
+Content negotiation: control what type of data to return
+UIR passed with parameters
+  mediaType=xml, return xml
+  mediaType=json, return json
+@Configuration
+public class WebCong implements WebMvcConfigurer {
+  @Override
+  public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+    configurer.favorParameter(true)
+      .parameterName("mediaType")
+      .defaultContentType(MediaType.APPLICATION_JSON)
+      .mediaType("xml", MediaType.APPLICATION_JSON)
+      .mediaType("json", MediaType.APPLICATION_XML);
+  }
+}
+Note: add xml dependency to pom.xml
+
+Data Filter for restful service for fields
+@JsonIgnore: On a field; it can ignore a specific field when response returns
+@JsonIgnoreProperties: On a class; ({"department", "other"})
+
+API versioning
+1. add into path variable uri with version as resource: /v1/tweet; /v2/tweet
+2. request params: /tweet?version=v1
+3. http header: 
 
 -------------------------------------
 Spring Data JPA related annotations
