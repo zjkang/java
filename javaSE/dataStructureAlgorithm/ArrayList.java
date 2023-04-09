@@ -13,6 +13,8 @@ for (int x: nums) {
     System.out.print(x + " ");
 }
 System.out.println();
+// initialize a fix value
+Arrays.fill(nums, 1);
 
 
 // List
