@@ -1,7 +1,6 @@
 Bean
 
 
-
 1. @SpringBootApplication: package component scan, auto config, config
 auto confi: jar dependency added in porm.xml
 ComponentScan: scan packages
@@ -14,7 +13,8 @@ Configuration: bean definition
 @Repository
 
 
-3. @Configuration, @Bean: use java based configuration
+3. @Configuration
+@Bean: use java based configuration
 
 4. @Autowired, @Qualifier, @Primary
 @Autowired: one dependency injection
@@ -37,7 +37,7 @@ switch dev/staging/prod env for configuration properties
 need to specify which one is active in properties
 
 11. Scope
-singleton, prototype, 
+singleton, prototype,
 
 -------------------------------------
 Rest API related Annotations: expose the endpoint
@@ -74,13 +74,13 @@ e.g.
 @ControllerAdvice
 public class RestResponseEntityExceptionHandler 
   extends ResponseEntityExceptionHandler {
-  
+
   @ExceptionHandler(EmployeeNotFoundException.class)
   @ResponseBody
   @ResponseStatus(HttpStatus.NOT_FOUND)
   public ErrorMessage employeeNotFoundExceptionHandler(EmployeeNotFoundException e) {
   }
-  
+
   @ExceptionHandler(Exception.class)
   @ResponseBody
   @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -112,26 +112,63 @@ Data Filter for restful service for fields
 API versioning
 1. add into path variable uri with version as resource: /v1/tweet; /v2/tweet
 2. request params: /tweet?version=v1
-3. http header: 
+3. http header:
+
+In controller method, we can return
+ResponseEntity<Class> not directly return Class
+e.g., return new ResponseEntity<>(productId, HttpStatus.CREATED)
+
+@Log4j2 for log
+
 
 -------------------------------------
 Spring Data JPA related annotations
 
-@Entity: tell jpb this is entity to perform db operations
+ORM: object related mapping
+caller workflow:
+ - Code
+ - JPA layer: define a specification: hibernate
+ - JDBC API
+ - JDBC Driver
+ - DB
+
+Add dependency into pom.xml
+Repository extends JpaRepository<Entity, Id>
+@Entity: POJO class; tell jpa this is entity to perform db operations
 @Table(name = "STUDENT_TBL")
 
 @Id: primary key
-@Column
-@GeneratorValue
+@Column(name = "PRODUCT_NAME")
+@GeneratorValue(strategy = GenerationType.AUTO)
 @GeneratorType
 
 @Transactional(isolation = "", propagation = "")
 
 @OneToMany(targetEntity = )
 
+Noe: the other way by using entityManager
+
+
+-------------------------------------
+Lombok: for getter/setter, constructor, builer
+
+@Data
+  getter/setter, required Args constriuctor, toString, Equals/HashCode, Value
+@AllArgsConstructor
+@NoArgsConstructor
+@Buidler
 
 -------------------------------------
 Security related Annotations
+
+Auth2 authentication: Authentication Code (JWT token Json web token)
+header, body, signature (credentials)
+Client send request with code
+
+Okta
+
+
+
 
 -------------------------------------
 Cached related Annotations

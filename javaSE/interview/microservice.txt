@@ -1,9 +1,6 @@
 https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices
-
-
 grpc
 https://techdozo.dev/grpc-for-microservices-communication/
-
 
 login management
 order management
@@ -14,8 +11,51 @@ each microservice can be developed independently.
 each miscroservce can use different tech.
 decouple the systems
 
-each microservice focuses on one functionalities, its own data model
-stateless
+each microservice focuses on one functionalities, its own data model; stateless
+
+
+-----------------------------------
+udemy course: microservice
+https://www.udemy.com/course/microservices-with-spring-boot/learn/lecture/36583872#overview
+
+service registry -> Eureka server: defulat http://localhost:8761/eureka
+  multiple instances
+  product service 192.168.1.2 Eureka client
+  order service: 192.168.1.1 Eureka client
+  payment service 192.168.1.3 Eureka client
+
+Eureka server: add @EnableEurekaServer, add configurations
+
+
+config server:
+@EnableConfigServer
+configure config client for other services
+
+
+Communication between microservices: openFeign
+  - Feign Client introduction:
+      add external client with annotation to copy other services endpoint as declarative way
+  - Rest template:
+      create a new for RestTemplte();
+
+
+Zipkin & Slueth: distributed log trace
+
+
+API Gateway
+  Cloud Gateway: add configuration for routes
+
+
+Circuit Breaker: design pattern
+ - caller: handle circuit Breaker
+ - Resilience4j
+    - circuit Breaker
+    - rate limiter: redis
+ - states: CLOSED(health)      OPEN(service down)
+                HALF OPEN(success rate: thredshold)
+
+
+
 
 
 -----------------------------------
@@ -26,3 +66,7 @@ monolithic
 
 
 
+
+local developement 
+-> docker & k8s 
+-> CI/CD 
