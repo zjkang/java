@@ -1,0 +1,6 @@
+
+object.wait() or object.notify()
+https://www.baeldung.com/java-wait-notify
+
+thread.join()
+https://www.baeldung.com/java-thread-join
