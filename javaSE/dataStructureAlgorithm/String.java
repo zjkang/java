@@ -16,6 +16,11 @@ for (String name : names) {
 System.out.println(nameBuilder);
 
 
+// insert to the front
+StringBuilder sb = new StringBuilder();
+while (!stack.isEmpty()) {
+    sb.insert(0, stack.pop());
+}
 
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
