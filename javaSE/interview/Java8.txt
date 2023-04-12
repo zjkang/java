@@ -1,5 +1,6 @@
-// java 8 interview: https://www.youtube.com/watch?v=k7fNLXoVCYg&list=PLVz2XdJiJQxwS8FyWnWyKyfILxHPLsiro&index=16
-// java 8 programming: https://www.youtube.com/watch?v=1Ps5F1PU72M
+// java 8 General interview: https://www.youtube.com/watch?v=k7fNLXoVCYg
+// java 8 Stream API programming: https://www.youtube.com/watch?v=1Ps5F1PU72M
+// Java 8 CompletableFuture: https://www.youtube.com/watch?v=GJ5Tx43q6KM
 
 
 1. What are all features of java 8 did you use?
@@ -9,22 +10,43 @@
 (4) CompletableFuture
 (5) Java DateTime API
 
+
 2. What is functional interface?
+An interface that contains only one abstract method is known as functional
+interace, it can have any number of default and static methods
+
 
 3. Can you tell few functional interface before Java 8?
-Runnalbe, Callable
+Runnalbe: () -> void
+Callable: () throws Exception -> T
 Comparator (equals method override from java.lang.Object which does not account for abtract method)
 
+
 4. Can you write one functional interface?
+@FunctionalInterface
+public interface Test {
+    void test(String s);
+}
+
 
 5 can we extends functional interface from another functional interface?
+Yes, but if you add another abstract method, then it is not functional interface at all.
+
 
 6. What are all functional interface introduced in Java 8?
-Function, Predicate, Consumer, Supplier
+Function: (T) -> R: apply
+Predicate: (T) -> boolean: test
+Consumer: (T) -> void: accept
+Supplier: () -> T: get
+
 
 7. What is lambda expression?
+express instances of functional interfaces, represent method of a functional using an expression
+
 
 8. what's the advantages and disadvantages of Lambda expression?
+
+
 
 9. What is stream API?
 process collections of objects with functional style of coding using lambda expression to be pipelined
