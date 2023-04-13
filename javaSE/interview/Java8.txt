@@ -45,13 +45,23 @@ express instances of functional interfaces, represent method of a functional usi
 
 
 8. what's the advantages and disadvantages of Lambda expression?
-
+advantages:
+  1. avoid writing anonymous impl
+  2. save a lot of code
+  3. readable w/o interpretation
+disadvantage:
+  1. hard to use w/o IDE
+  2. complex to debug
 
 
 9. What is stream API?
 process collections of objects with functional style of coding using lambda expression to be pipelined
 
 10. What is stream in java 8?
+A stream is a sequence of objects that support various method which can be pipelined to produce the desird result.
+Take input from collections, arrays or I/O channels. 
+Streams do not change the original data structure, they only provide the result as per the pipelined methods
+
 
 11. What is method reference 8?
 shorthand notation of lambda expression to call a method
