@@ -27,8 +27,8 @@ completableFuture.complete("return some dummy data");
 
 runAsync() vs supplyAsync()
 默认是forkJoinPool.commonPool executor
-1. CompletableFuture.runAysn(Runnable)
-2. CompletableFuture.runAysn(Runnable, Executor)
+// 1. CompletableFuture.runAysn(Runnable)
+// 2. CompletableFuture.runAysn(Runnable, Executor)
 
 1. CompletableFuture.runAysn(Supplier<T>)
 2. CompletableFuture.runAysn(Supplier<T>, Executor)
@@ -39,6 +39,15 @@ chain multple futures
 thenApply(Function)
 thenAccept(Cconsumer)
 thenRun(Runnable)
+
+e.g., 
+CompletableFuture.supplyAsync(() -> {})
+  .thenApply((T) -> R)
+  .thenApply()
+  .thenAccept();
+  
+
+
 
 
 
