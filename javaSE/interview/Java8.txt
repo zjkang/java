@@ -66,13 +66,21 @@ Streams do not change the original data structure, they only provide the result 
 11. What is method reference 8?
 shorthand notation of lambda expression to call a method
 
-list.stream().filter(t -> t > 4).sorted().forEach(System.out::println); // static
+// static
+list.stream().filter(t -> t > 4).sorted().forEach(System.out::println); 
 Test test = new Test();
-list.stream().filter(t -> t > 4).sorted().forEach(test::printlnElement); // non-static
+ // non-static
+list.stream().filter(t -> t > 4).sorted().forEach(test::printlnElement);
+
 
 12. few stream method you used in project?
-filter, forEach, sorted, map, flatMap, reduce, 
-groupingBy (2. interview programming question), count, collect
+filter
+forEach
+sorted
+map, flatMap, reduce, 
+groupingBy (2. interview programming question), 
+count
+collect
 
 https://www.jianshu.com/p/afe6f60d492a
 
@@ -83,13 +91,17 @@ Map<Integer, Optional<T>> maps4 = trans.stream().collect(groupingBy(T::getYear,
 
 把收集器结果转换为另一种类型
 Collectors.collectingAndThen(W,M) 返回一个收集器
-W：要转换的收集器 M：W的结果maxBy(comparing(Transaction::getValue)) -> Optional<Transaction> 转换函数 e -> e.get()
+W：要转换的收集器, 
+M：W的结果, maxBy(comparing(Transaction::getValue)) -> Optional<Transaction> 转换函数 e -> e.get()
 Map<Integer, Transaction> maps5 = trans.stream().collect(groupingBy(Transaction::getYear,
-    collectingAndThen(maxBy(comparing(Transaction::getValue)), Optional::get)));
+    collectingAndThen(
+        maxBy(Comparator.comparing(Transaction::getValue)), 
+        Optional::get)));
 
 于groupingBy联合使用的其他收集器
 Collectors.mapping(W,M) 返回一个收集器
-W：转换函数 M：收集函数
+W：转换函数
+M：收集函数
 
 Map<Integer, Set<Level>> maps7 = trans.stream()
     .collect(groupingBy(Transaction::getYear, Collectors.mapping(t -> {
@@ -103,7 +115,17 @@ Map<Integer, Set<Level>> maps7 = trans.stream()
 
 
 13. when to use map & flatMap?
-List<String> lists = users.stream().flatMap(e -> e.getEmail().stream()).collect(Collectors.toList());
+class User {
+    private List<String> emails;
+    public List<String> getEmail() {
+        return emails;
+    }
+}
+List<String> lists = users.stream()
+    .flatMap(
+        e -> e.getEmail().stream())
+    .collect(Collectors.toList());
+
 
 14. WAP using stream to find frequency of each character in a given string?
 String test = "abcdabc";
@@ -112,18 +134,62 @@ Map<String, Long> collect = Arrays.stream(test.split(""))
                 Function.identity(),
                 Collectors.counting()));
 
+
 15. Assume you have list of employee in various dept, WAP to find highest paid employee from each dept?
 
+Comparator<Employee> compareBySalary = Comparator.comparing(Employee::getSalary);
+Map<String, Optional<Employee>> map = employees.stream().collect(Collectors.groupingby(
+    Employee::getDept, 
+    Collectors.reducing(BinaryOperator.maxBy(compareBySalary)
+);
+
+// approach
+employees.stream().collect(Collectors.groupingby(
+    Employee::getDept, 
+    Collectors.collectingAndThen(BinaryOperator.maxBy(compareBySalary),
+    Optional::get)
+);
+
+
 16. Stream vs parallel stream?
+stream: single core of machine in sequence
+parallel stream: multiple cores: the execution order in sequence is not guaranteed.
+
 
 17. Waht is CompletableFuture? 
-CompletableFuture is used async programming in Java. Async programming is a means of writing non-blocding code by running a task on a seprate thread than the main thread, notifying the main thread about its progress, completion or failure. 
+CompletableFuture is used async programming in Java. 
+Async programming is a means of writing non-blocding code by running a task on a seprate thread than the main thread, notifying the main thread about its progress, completion or failure. 
+Can run N task in separate thread w/o blocking main thread. When the task is complete, it notifies to the main thread (whether the task is completed or failed)
+
+
 
 18. Why CompletableFuture why not Future? 
 (1) It cannot be manually completed
 (2) Multiple futures cannot chained together
 (3) cannot combine multiple futures together
 (4) no exception handling
+
+FutureTask<String> task = new FutureTask<>(() -> {
+    Thread.sleep(1000);
+    return "Complete";
+});
+Thread th = new Thread(task);
+th.start();
+// block main thread; 
+// Future interface, waiting for result; or task.isDone()
+System.out.println(task.get());  
+
+ExecutorService executorService = Executors.newSingleThreadExecutor();
+Future<String> task = executorService.submit(() -> {
+    Thread.sleep(1000);
+    return "Complete";
+});
+System.out.println(task.get());
+
+
+
+
+
 
 19. How to deciede Thread pool size?
 
