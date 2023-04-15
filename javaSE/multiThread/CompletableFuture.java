@@ -34,6 +34,14 @@ runAsync() vs supplyAsync()
 2. CompletableFuture.runAysn(Supplier<T>, Executor)
 
 
+chain multple futures
+
+thenApply(Function)
+thenAccept(Cconsumer)
+thenRun(Runnable)
+
+
+
 
 
 
