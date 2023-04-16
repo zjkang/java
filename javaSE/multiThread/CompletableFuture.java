@@ -2,7 +2,7 @@
 // https://www.youtube.com/watch?v=GJ5Tx43q6KM
 // https://www.youtube.com/watch?v=oFRtBuRviHM
 // https://juejin.cn/post/6844904195162636295
-// https://www.liaoxuefeng.com/wiki/1252599548343744/1306581182447650
+// Liaoxuefeng: https://www.liaoxuefeng.com/wiki/1252599548343744/1306581182447650
 
 // CompletableFuture tutorials
 // Compare with Futures, ExecutorService, Callback interface, Thread Pools
