@@ -187,13 +187,16 @@ Future<String> task = executorService.submit(() -> {
 System.out.println(task.get());
 
 
-
-
-
-
 19. How to deciede Thread pool size?
+- CPU intensive tasks (# of cores + 1)
+- IO intensive tasks ( > # of cores)
+
+
 
 20. WAP to print even and oldd using 2 threads.
+
+- Before Java 7, create 2 threads; use object.wait(); object.notify();
+- Java 8 use CompletableFuture; use object.wait(); object.notify()
 
 CompletableFuture.runAsync(() -> EvenOdd.Printer.printNumber(oddCond)); // thread 1
 CompletableFuture.runAsync(() -> EvenOdd.Printer.printNumber(evenCond)); // thread 2
