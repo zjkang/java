@@ -34,18 +34,20 @@ runAsync() vs supplyAsync()
 2. CompletableFuture.runAysn(Supplier<T>, Executor)
 
 
-chain multple futures
+// chain multple futures
 
 thenApply(Function)
-thenAccept(Cconsumer)
+thenAccept(Consumer)
 thenRun(Runnable)
 
-e.g., 
-CompletableFuture.supplyAsync(() -> {})
-  .thenApply((T) -> R)
+// e.g., can pass the same executor with different threads in the pool; 
+// or even different executor (not recommend)
+CompletableFuture.supplyAsync(() -> {}, executor)
+  .thenApply((T) -> R, executor)
   .thenApply()
   .thenAccept();
-  
+
+
 
 
 
