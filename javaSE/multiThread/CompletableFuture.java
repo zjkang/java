@@ -3,6 +3,7 @@
 // https://www.youtube.com/watch?v=oFRtBuRviHM
 // https://juejin.cn/post/6844904195162636295
 // Liaoxuefeng: https://www.liaoxuefeng.com/wiki/1252599548343744/1306581182447650
+// https://www.baeldung.com/java-completablefuture
 
 // CompletableFuture tutorials
 // Compare with Futures, ExecutorService, Callback interface, Thread Pools
