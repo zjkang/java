@@ -1,1 +1,6 @@
 
+Ctrl + Opt + H: caller of the method or the variable
+Ctrl + H: look up class hirarchy
+
+Opt + Cmd + b: look up implementation of abstract method or interface
+Opt + F7: caller of the method or the variable
