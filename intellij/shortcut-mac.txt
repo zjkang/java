@@ -1,6 +1,5 @@
 // https://www.youtube.com/watch?v=TNGqPxQRKZ4&t=2s
 
-
 Ctrl + Opt + H: caller of the method or the variable
 Ctrl + H: look up class hirarchy
 
@@ -10,7 +9,9 @@ Opt + F7: caller of the method or the variable
 Cmd + F12: look up methods in the class
 Cmd + O: search file / class globally; similar one: Shift + Shift
 Cmd + Shift + F: globally search
+Cmd + n: generate constructors / getters / setters
 
 
+Debug skills:
 
 
