@@ -14,4 +14,9 @@ Cmd + n: generate constructors / getters / setters
 
 Debug skills:
 
+点击行数位置:跳转到指定行
+删除并重置调用栈: drop frame使得代码会到以前的位置
+
+右键双击断点:设置条件断点;
+
 
