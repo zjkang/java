@@ -1,3 +1,17 @@
+class SegmentNode {
+    int start;
+    int end;
+    int sum;
+    SegmentNode left = null;
+    SegmentNode right = null;
+    SegmentNode(int start, int end, int sum) {
+        this.start = start;
+        this.end = end;
+        this.sum = sum;
+    }
+}
+
+
 class SegmentTree {
     SegmentNode root = null;
     
