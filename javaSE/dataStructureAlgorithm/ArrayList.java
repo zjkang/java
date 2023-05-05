@@ -73,6 +73,14 @@ List<Integer> nums2 = Arrays.asList(nums1);
 System.out.println("Object[] to List<Integer> " + nums2);
 Integer[] nums3 = nums2.toArray(new Integer[0]); // T[]
 System.out.println(Arrays.toString(nums3));
+
+// List<Object> -> Object[]
+// https://www.javatpoint.com/convert-list-to-array-in-java
+// 2种方式;1.初识数组大小
+int [][] ans = new int[res.size()][];
+ans = res.toArray(ans);
+// 2.use new int[0][]
+int [][] ans = res.toArray(new int[0][]);
         
 
 // sort https://www.baeldung.com/java-sorting-arrays
