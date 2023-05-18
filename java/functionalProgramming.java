@@ -107,7 +107,8 @@ IntStream is = Arrays.stream(new int[] { 1, 2, 3 });
 LongStream ls = List.of("1", "2", "3").stream().mapToLong(Long::parseLong);
 
 
-
+// 使用map
+// 使用filter
 
 
 
