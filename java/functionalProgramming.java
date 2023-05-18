@@ -1,4 +1,6 @@
 /**
+https://www.liaoxuefeng.com/wiki/1252599548343744/1255943847278976
+
 函数式编程称为Lambda计算
 
 Lambda基础
@@ -109,6 +111,46 @@ LongStream ls = List.of("1", "2", "3").stream().mapToLong(Long::parseLong);
 
 // 使用map
 // 使用filter
+// 使用reduce
+public class Main {
+    public static void main(String[] args) {
+        int sum = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9).reduce(0, (acc, n) -> acc + n);
+        System.out.println(sum); // 45
+    }
+}
+// 如果去掉初始值，我们会得到一个Optional<Integer>：
+Optional<Integer> opt = stream.reduce((acc, n) -> acc + n);
+if (opt.isPresent()) {
+    System.out.println(opt.get());
+}
+
+// reduce()方法传入的对象是BinaryOperator接口，它定义了一个apply()方法
+@FunctionalInterface
+public interface BinaryOperator<T> {
+    // Bi操作：两个输入，一个输出
+    T apply(T t, T u);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
