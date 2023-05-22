@@ -8,8 +8,16 @@ System.out.println(map.get("B")); // return 1
 System.out.println(map.containsKey("B")); // return true
 System.out.println(map); //{A=0,B=1,C=2}
 
+Map<Integer, Integer> count = new HashMap<>();
+for (int x : nums) {
+   count.put(x, count.getOrDefault(x, 0) + 1);
+}
+
 for(Map.Entry<String, Integer> entry : map.entrySet()) {
    System.out.println(entry.getKey() + ":" + entry.getValue());
+}
+
+for (int x : map.keySet()) {
 }
 
 https://stackoverflow.com/questions/48183999/what-is-the-difference-between-putifabsent-and-computeifabsent-in-java-8-map
@@ -30,11 +38,14 @@ https://stackoverflow.com/questions/48183999/what-is-the-difference-between-puti
 // !!! NOTE: v is NOT current v; it is previous v. So always use computeIfAbsent 
 // !!! when trying to use something like a.put(k, k -> new ArrayList<>()).add(b); 
 
-v = map.putIfAbsent("D", 3); // only add once key D does not in map
-v == null; // if D not exist in map
+// v = map.putIfAbsent("D", 3); // only add once key D does not in map
+// v == null; // if D not exist in map
 
 // map.computeIfAbsent();
 // map.computeIfPresent();
+
+Map<String, List<String>> map = new HashMap<>();
+map.computeIfAbsent("A", k -> new ArrayList<>()).add("AA");
 
 
 // Hash Set
