@@ -45,7 +45,9 @@ PriorityQueue<Integer> pq = new PriorityQueue<>(new Comparator<Integer>() { // o
 pq.offer(2);
 pq.offer(0);
 pq.offer(1);
+pq.size(): // 3
 System.out.println(pq.peek()); // return 0 O(1)
 System.out.println(pq.poll()); // return 0 O(logn)
 System.out.println(pq.poll()); // return 1 O(logn)
+
 
