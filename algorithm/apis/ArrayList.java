@@ -2,6 +2,8 @@
 
 //Array
 int[] nums = new int[10]; // new int[2]{1,2}
+Integer[][] dp = new Integer[n][2];
+
 nums[0] = 1;
 System.out.println(Arrays.toString(nums)); // [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 // loop
